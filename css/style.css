@@ -1,0 +1,619 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'roboto'; */
+    font-family: 'Open Sans', sans-serif;
+}
+/* ----------------------start global style------------------ */
+:root{
+    --mainColor: #20c997;
+    --textColor: #4C4D4D;
+}
+.container{
+    margin: auto;
+    width: 85%;
+}
+section{
+    padding: 5% 0;
+}
+.contain{
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+.title{
+    text-align: center;
+    position: relative;
+}
+.title h1{
+    text-transform: uppercase;
+    font-size: 130px;
+    font-weight: 900;
+    letter-spacing: 30px;
+    color: #efefef;
+}
+.title h3{
+    margin-top: -95px;
+    font-size: 30px;
+    font-weight: 700;
+}
+.line{
+    width: 5%;
+    height: 3px;
+    background: var(--mainColor);
+    position: absolute;
+    left: 47%;
+}
+p{
+    color: var(--textColor);
+}
+/* ----------------------end global style------------------ */
+
+/* ----------------------start header------------------ */
+header{
+    background-image: url(../img/intro-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+.overlay{
+    background-color: rgb(18 20 23 / 67%);
+    height: 100vh;
+    overflow: auto;
+}
+.nav-item a{
+    color: #fff !important;
+    font-size: 17px;
+}
+.overlay nav{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+header .nav-item a.active{
+    color: var(--mainColor) !important;
+}
+.overlay ul li:hover a{
+    color: var(--mainColor) !important;
+}
+.overlay .navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+.overlay .navbar-toggler-icon img
+{
+    width: 30px;
+    margin-top: 5px;
+}
+.overlay .head-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.overlay .head-title .title-contain{
+    color: #fff;
+    text-align: center;
+}
+.overlay .head-title .title-contain h1{
+    font-size: 60px;
+    font-weight: 900;
+    margin: 20px;
+}
+.overlay .head-title .title-contain button{
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid var(--mainColor);
+    transition: 0.4s;
+    margin-top: 15px;
+}
+.overlay .head-title .title-contain button:hover{
+    background-color: var(--mainColor);
+}
+.overlay .head-title h2::after{
+    content: "";
+    animation-name: type;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes type {
+    0%{content: "|";}
+    5%{content: "e|";}
+    10%{content: "es|";}
+    15%{content: "esi|";}
+    20%{content: "esig|";}
+    25%{content: "esign|";}
+    30%{content: "esigner|";}
+    35%{content: "esigne|";}
+    40%{content: "esign|";}
+    45%{content: "esig|";}
+    50%{content: "esi|";}
+    55%{content: "es|";}
+    60%{content: "e|";}
+    65%{content: "ev|";}
+    70%{content: "eve|";}
+    75%{content: "evel|";}
+    80%{content: "evelo|";}
+    85%{content: "evelop|";}
+    90%{content: "evelope|";}
+    95%{content: "eveloper|";}
+}
+/* ----------------------end header------------------ */
+/* ----------------------start about------------------ */
+/* ----------start left side ----------- */
+.contain .left-side{
+    flex-basis: 65%;
+    padding: 10px;
+}
+.contain .left-side h2{ 
+    font-size: 25px;
+    font-weight: 600;
+    color: #252B33;
+}
+.contain .left-side h2 span{
+    color: var(--mainColor);
+}
+/* ------------ end left side ---------- */
+
+/* ------------ start right side ---------- */
+.contain .right-side{
+    flex-basis: 30%;
+    padding: 10px;
+}
+.contain .right-side p:nth-child(3){
+    color: var(--mainColor);
+}
+.contain .right-side p span{
+    color: #252B33;
+    font-weight: 600;
+    margin-right: 5px;
+}
+.hr-line{ 
+    width: 90%;
+    margin: 10px auto;
+    height: 1px;
+    background: #ddd;
+}
+.contain .right-side .btn-primary{
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: var(--mainColor);
+    border-color: var(--mainColor);
+    outline: none;
+}
+.contain .right-side .btn-primary:hover{
+    background: #28b188;
+}
+/* ------------ end right side ---------- */
+/* ----------------------end about------------------ */
+
+/* ----------------------start count------------------ */
+.count{
+    justify-content: space-evenly;
+}
+.item{
+    text-align: center;
+    position: relative;
+}
+.contain .item h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: #888d94;
+}
+.contain .item p{
+    font-size: 20px;
+}
+.item h2 span{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+    margin-left: 50%;
+}
+.count-line{
+    display: none;
+}
+/* ----------------------end count------------------ */
+
+
+/* ----------------------start service------------------ */
+.color{
+    background-color: #F8F9FA;
+}
+.serv{
+    flex-basis: 50%;
+}
+.serv-contain{
+    display: flex;
+    padding: 25px;
+}
+.serv-contain .icon{
+    margin-right: 15px;
+}
+.serv-contain .icon img{
+    width: 60px;
+}
+/* ----------------------end service------------------ */
+
+
+/* ---------------------- start summary ------------------ */
+
+.summary .left-side,
+.summary .right-side{
+    flex-basis: 50%;
+}
+.summary .sum{
+    margin: 20px 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+}
+.summary  h5,
+.summary  h5{
+    font-weight: 700;
+}
+.summary .left-side .sum h6,
+.summary .right-side .sum h6{
+    background: var(--mainColor);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: max-content;
+}
+.summary .left-side .sum h2,
+.summary .right-side .sum h2{ 
+    font-size: 25px;
+    font-weight: 600;
+    color: #252B33;
+}
+.summary .left-side .sum h4,
+.summary .right-side .sum h4{
+    font-size: 17px;
+    color: #c30e0e;
+    margin-bottom: 15px;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skill{
+    margin: 20px 20px;
+}
+.skill h6{
+    font-weight: 600;
+    font-size: 15px;
+}
+.skill .progress{
+    height: 8px;
+    font-size: 10px !important;
+}
+.skill .progress .progress-bar{
+    background: var(--mainColor);
+}
+.caption{
+    display: flex;
+    justify-content: space-between;
+}
+.summary button{
+    margin: 20px auto;
+    background: transparent;
+    border-color: #555;
+    color: #555;
+    padding: 10px 30px;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.summary button:hover{
+    background: #555;
+    color: #fff;
+}
+/* ---------------------- end summary ------------------ */
+
+
+/* -------------- start portfolio ------------- */
+.portfolio .contain{
+    justify-content: center;
+}
+.portfolio .brands{
+    margin-top: 8%;
+}
+.portfolio .brands p{
+    word-spacing: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.portfolio .brands p span{
+    color: var(--mainColor);
+}
+
+.portfolio .project{
+    position: relative;
+}
+.portfolio .layer{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.363);
+    opacity: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio .layer h3{
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.portfolio .project:hover .layer{
+    height: 100%;
+    opacity: 1;
+}
+/* -------------- end portfolio ------------- */
+
+/* -------------- start testi ------------- */
+.testi{
+    margin-top: 8%;
+    padding: 30px;
+}
+.testi .carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+}
+.testi .carousel-indicators [data-bs-target].active{
+    background-color: var(--mainColor);
+}
+.carousel-indicators{
+    bottom: -15%;
+}
+.testimonial .box{
+    margin: 15px;
+    background: #F8F9FA;
+    padding: 20px;
+    border-radius: 15px;
+}
+.testimonial .box .img img{
+    border-radius: 50%;
+}
+.testimonial .box .img-title h3{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.testimonial .box .img-title p{
+    font-size: 14px;
+}
+.testimonial .box .box-text p{
+    color: #252B33;
+    margin-top: 15px;
+}
+/* -------------- end testi ------------- */
+
+
+/* -------------- start  contact ------------- */
+.contact .left-side{
+    flex-basis: 20%;
+}
+.contact .right-side{
+    flex-basis: 60%;
+}
+.contact h3{
+    font-weight: 600;
+    font-size: 20px;
+}
+.contact .right-side form input[type="text"]{
+    padding: 10px;
+    width: 310px;
+    margin: 10px 10px 10px 0;
+    outline: none;
+    border-color: transparent;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+}
+.contact .right-side form textarea{
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    margin: 10px 10px 10px 0;
+    outline: none;
+    border-color: transparent;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    resize: none;
+}
+.contact form .btn-primary{
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: var(--mainColor);
+    border-color: var(--mainColor);
+    outline: none;
+}
+.contact form .btn-primary:hover{
+    background: #28b188;
+}
+/* -------------- end contact ------------- */
+
+footer{
+    padding: 2%;
+}
+footer span{
+    color: var(--mainColor);
+}
+
+
+/* -------------------- start media --------------------- */
+@media screen and (max-width: 568px) {
+    /* global */
+    .title h1{
+        font-size: 35px;
+        letter-spacing: 10px;
+        color: #ccc;
+    }
+    .title h3{
+        margin-top: -35px;
+        font-size: 15px;    
+    }
+    /* end global  */
+
+    /* start header */
+    .overlay .head-title .title-contain h1{
+        font-size: 30px;
+    }
+    /* end header */
+
+    /* start about */
+    .contain .left-side{
+        flex-basis: 100%;
+    }
+    .contain .left-side h2{ 
+        font-size: 21px;
+    }
+    .contain .right-side{
+        flex-basis: 100%;
+    }
+    /* end about */
+
+    /* start count  */
+    .contain .item h2{
+        font-size: 40px;
+    }
+    .contain .item p{
+        font-size: 20px;
+    }
+    .item h2 span{
+        display: none;
+    }
+    .item {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+    .count-line{
+        width: 50%;
+        height: 2px;
+        background: #ddd;
+        position: relative;
+        top: -15px;
+        right: 0px;
+        display: block;
+    }
+    /* end count  */
+
+    /* start services  */
+    .serv{
+        flex-basis: 100%;
+    }
+    /* end services  */
+
+    /* start skills  */
+    .summary .left-side, 
+    .summary .right-side {
+        flex-basis: 100%;
+    }
+    /* end skills  */
+
+    /* start portfolio  */
+    .portfolio .project {
+        flex-basis: 100%;
+    }
+    /* end portfolio  */
+}
+
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+    /* global */
+    .title h1{
+        font-size: 50px;
+        letter-spacing: 10px;
+        color: #ccc;
+        }
+    .title h3{
+        margin-top: -45px;
+        font-size: 15px;    
+    }
+    /* end global  */
+
+    /* start header */
+    .overlay .head-title .title-contain h1{
+        font-size: 30px;
+    }
+    /* end header */
+
+    /* start about */
+    .contain .left-side{
+        flex-basis: 100%;
+    }
+    .contain .left-side h2{ 
+        font-size: 21px;
+    }
+    .contain .right-side{
+        flex-basis: 100%;
+    }
+    /* end about */
+
+    /* start count  */
+    .contain .item h2{
+        font-size: 40px;
+    }
+    .contain .item p{
+        font-size: 20px;
+    }
+    .item h2 span{
+        display: none;
+    }
+    .item {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+    }
+    /* end count  */
+
+    /* start services  */
+    .serv{
+        flex-basis: 50%;
+    }
+    /* end services  */
+
+    /* start skills  */
+    .summary .left-side, 
+    .summary .right-side {
+        flex-basis: 100%;
+    }
+    /* end skills  */
+
+    /* start portfolio  */
+    .portfolio .project {
+        flex-basis: 45%;
+    }
+    /* end portfolio  */
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* global */
+    .title h1{
+        font-size: 100px;
+        letter-spacing: 10px;
+        color: #ccc;
+        }
+    .title h3{
+        margin-top: -80px;
+        font-size: 25px;    
+    }
+    /* end global  */
+}
+
+@media screen and (min-width: 993px){
+    .title h1{
+        font-size: 100px;
+        letter-spacing: 10px;
+        color: #ccc;
+        }
+}
+/* ---------------------- end media ------------------ */

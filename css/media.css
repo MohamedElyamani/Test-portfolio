@@ -1,0 +1,7 @@
+@media screen and (max-width: 568px) {
+    .title h1{
+        font-size: 30px;
+        letter-spacing: 10px;
+        color: #ccc;
+    }
+}
